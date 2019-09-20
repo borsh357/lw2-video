@@ -1,24 +1,60 @@
+body {
+  background: #bec4cf;
+}
+
+#container {
+  margin: auto;
+  width: 80%;
+}
+
 .text-center {
   text-align: -webkit-center;
 }
 
-.video-gallery {
+#current-video {
   font-family: 'Source Sans Pro', sans-serif;
+  float: left;
+  width: 840px;
+  height: 570px;
+  padding: 20px;
 }
 
-.video-gallery td {
-  border: #386b68 2px solid;
-  border-radius: 10px;
+/* aside block */
+#video-links {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  float: right;
+  text-align: left;
+  width: auto;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+/* a single link */
+.video-link {
+  padding: 5px;
+  border-radius: 5px;
+  color: #4a4a4a;
+  background: none;
+  transition: all 0.2s;
+}
+
+.video-link:hover {
+  background: #73aec7;
+  cursor: pointer;
+}
+
+#comments-section {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
-}
-
-.current-video {
-  border: none !important;
-  border-radius: 0 !important;
+  width: 800px;
+  padding: 20px;
+  float: left;
+  display: none;
 }
 
 .video-name {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 #nothing-to-play {
@@ -26,27 +62,16 @@
   margin: 2em;
 }
 
-#video-1, #video-2, #video-3, #video-4 {
-  display: none;
-  margin: 10px;
-  border-radius: 0 !important;
-}
-
 iframe {
   border: none;
 }
 
-.comments-block {
-  border-radius: 0 !important;
-  padding: 20px;
-}
-
-#video-1-comments-block, #video-2-comments-block, #video-3-comments-block, #video-4-comments-block {
+#video-1, #video-2, #video-3, #video-4, #video-1-comments-block, #video-2-comments-block, #video-3-comments-block, #video-4-comments-block {
   display: none;
 }
 
 .comment-row {
-  background: #c7ced4;
+  background: #d9e6ff;
   padding: 10px;
   border-radius: 5px;
   font-size: 0.7em;
@@ -56,18 +81,26 @@ iframe {
 
 .comment-row p {
   margin-top: 5px;
-  
+}
+
+.comment-user {
+  color: #004cff;
 }
 
 #comment-write-box {
-  padding: 20px;
-  border-radius: 0 !important;
-  display: none;
+  font-size: 20px;
 }
+
+#comment-write-box h3 {
+  margin-bottom: 5px;
+  margin-top: 55px;
+}
+
 #comment-write-form input, textarea {
   font-size: 0.8em;
   padding: 5px;
-  margin: 10px 0px;
+  margin: 5px 0px;
+  width: 70%;
 }
 
 /* button styles */

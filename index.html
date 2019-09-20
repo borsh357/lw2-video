@@ -10,112 +10,89 @@
     <title>Видеогаллерея</title>
   </head>
 
-<!-- BEGIN BODY -->
   <body>
-    <main class="text-center">
-      <table class="video-gallery">
-        <tr>
-          <td class="current-video" rowspan="4">
-            <div id="nothing-to-play" class="text-center">
-              <p>Nothing to play!</p>
-              <p>Select a video</p>
-            </div>
-            <div id="video-1">
-              <video controls src="https://cs531400.vkuservideo.net/13/eabNTo8Oj8zMDg3/videos/0f416cfdbd.480.mp4?extra=R2YSRAuc0P_rd32OXIXnK8A1hBH_CSLmZrIX66DKJPfwDXiIcoBPtLjtwapJwgTBAHQB8c7oEHg4SbPLA3OLK1dj3ydMwpT1ZA50mBnNmfB8OO6ulYgrfrEaUzw0zQDIqPnM-h89OxVmPIUiX4AeKrgtrZ6X&c_uniq_tag=r4QhG3wIonvs1ayoh9q8a3Ty7bcZ0bOZ37VGiifUm7M"></video>
-              <p class="video-name">Saltman</p>
-            </div>
-            <div id="video-2">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/LXb3EKWsInQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <p class="video-name">COSTA RICA 4K</p>
-            </div>
-            <div id="video-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/nBYZpsbu9ds" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <p class="video-name">Transient 1000FPS</p>
-            </div>
-            <div id="video-4">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/VfYxEKoEkdI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <p class="video-name">Wekfest Japan 2019</p>
-            </div>
-          </td>
-          <td id="video-link-1">
-            Saltman
-          </td>
-        </tr>
-        <tr>
-          <td id="video-link-2">
-            COSTA RICA 4K
-          </td>
-        </tr>
-        <tr>
-          <td id="video-link-3">
-            Transient 1000FPS
-          </td>
-        </tr>
-        <tr>
-          <td id="video-link-4">
-            Wekfest Japan 2019
-          </td>
-        </tr>
-        <tr id="main-comments-block">
-          <td class="comments-block" id="video-1-comments-block">
-            Comments:
-              <div class="comment-row">
-                <strong>dima224</strong>
-                <p>good video!</p>
-            </div>
-          </td>
-          <td class="comments-block" id="video-2-comments-block">
-              Comments:
-              <div class="comment-row">
-                <strong>vasya</strong>
-                <p>perfecto</p>
-              </div>
-          </td>
-          <td class="comments-block" id="video-3-comments-block">
-              Comments:
-              <div class="comment-row">
-                <strong>antoshka</strong>
-                <p>Хочу также</p>
-              </div>
-          </td>
-          <td class="comments-block" id="video-4-comments-block">
-            Comments:
-            <div class="comment-row">
-              <strong>perforator</strong>
-              <p>Крутяк</p>
-            </div>
-            <div class="comment-row">
-              <strong>alexey</strong>
-              <p>Хорошее видео.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td id="comment-write-box">
-            <h3>Оставить комментарий</h3>
-            <form id="comment-write-form">
-              <input id="comment-input-username" type="text" placeholder="Имя пользователя" maxlength="30" required> <br>
-              <textarea id="comment-input-text" cols="30" rows="10" placeholder="Комментарий"></textarea> <br>
-              <button id="comment-send" class="btn btn-primary btn-outline" type="submit">Отправить</button>
-            </form>
-          </td>
-        </tr>
-      </table>
-    </main>
-    <script src="controls.js"></script>
-    <script>
-      var btnSend = document.getElementById("comment-send");
-          commentsBlock = document.getElementById("main-comments-block");
-          commentRow = commentsBlock.firstChild;
-          user = document.getElementById("comment-input-username");
-          text = document.getElementById("comment-input-text");
+    <div id="container"> <!-- main centered container with 80% width -->
+      <section id="current-video"> <!-- video player section -->
+        <div id="nothing-to-play" class="text-center"> <!-- if no video chosen, this block will show -->
+          <p>Nothing to play!</p>
+          <p>Select a video</p>
+        </div>
+        <div class="video" id="video-1">
+          <iframe width="820" height="472" src="https://www.youtube.com/embed/S_dfq9rFWAE" allowfullscreen></iframe>
+          <h1 class="video-name">Moscow timelapse in 4k</h1>
+        </div>
+        <div class="video" id="video-2">
+          <iframe width="820" height="472" src="https://www.youtube.com/embed/LXb3EKWsInQ" allowfullscreen></iframe>
+          <h1 class="video-name">COSTA RICA 4K</h1>
+        </div>
+        <div class="video" id="video-3">
+            <iframe width="820" height="472" src="https://www.youtube.com/embed/nBYZpsbu9ds" allowfullscreen></iframe>
+          <h1 class="video-name">Transient 1000FPS</h1>
+        </div>
+        <div class="video" id="video-4">
+          <iframe width="820" height="472" src="https://www.youtube.com/embed/VfYxEKoEkdI" allowfullscreen></iframe>
+          <h1 class="video-name">Wekfest Japan 2019</h1>
+        </div>
+      </section>
 
-      btnSend.onclick = function() {
-        event.preventDefault();
-        commentRow.innerHTML += '<div class="comment-row"><strong>' + user.value + ':</strong><p>' + text.value + '</p></div>';
+      <aside id="video-links"> <!-- playlist section -->
+        <strong>Playlist:</strong>
+        <div class="video-link" id="video-link-1">
+            Moscow timelapse in 4k
+        </div>
+        <div class="video-link" id="video-link-2">
+          COSTA RICA 4K
+        </div>
+        <div class="video-link" id="video-link-3">
+          Transient 1000FPS
+        </div>
+        <div class="video-link" id="video-link-4">
+          Wekfest Japan 2019
+        </div>
+      </aside>
 
-      }
-
-    </script>
+      <section id="comments-section"> <!-- comments section -->
+        Comments:
+        <div class="comments-block" id="video-1-comments-block">
+          <div class="comment-row">
+            <strong class="comment-user">dima224:</strong>
+            <p>good video!</p>
+          </div>
+        </div>
+        <div class="comments-block" id="video-2-comments-block">
+          <div class="comment-row">
+            <strong class="comment-user">vasya:</strong>
+            <p>perfecto</p>
+          </div>
+        </div>
+        <div class="comments-block" id="video-3-comments-block">
+          <div class="comment-row">
+            <strong class="comment-user">antoshka:</strong>
+            <p>Хочу также</p>
+          </div>
+        </div>
+        <div class="comments-block" id="video-4-comments-block">
+          <div class="comment-row">
+            <strong class="comment-user">perforator:</strong>
+            <p>Крутяк</p>
+          </div>
+          <div class="comment-row">
+            <strong class="comment-user">alexey:</strong>
+            <p>Хорошее видео.</p>
+          </div>
+        </div>
+              
+        <div id="comment-write-box">
+          <h3>Оставить комментарий</h3>
+          <form id="comment-write-form">
+            <input id="comment-input-username" type="text" placeholder="Имя пользователя" maxlength="30" required> <br>
+            <textarea id="comment-input-text" cols="50" rows="5" placeholder="Комментарий"></textarea> <br>
+            <button id="comment-send" class="btn btn-primary btn-outline" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section> <!-- end of comments section -->
+    </div> <!-- end of main container -->
+  <script src="controls.js"></script>
+  <script src="send-comment.js"></script>
   </body>
 </html>
