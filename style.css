@@ -1,0 +1,33 @@
+.text-center {
+  text-align: -webkit-center;
+}
+
+.video-gallery {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.video-gallery, .video-gallery td {
+  border: #386b68 2px solid;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.current-video {
+  border: none !important;
+  border-radius: none !important;
+}
+
+.video-name {
+  font-size: 1.8em;
+}
+
+#nothing-to-play {
+  font-size: 1.8em;
+  margin: 2em;
+}
+
+#video-1, #video-2, #video-3, #video-4 {
+  display: none;
+  margin: 10px;
+  border-radius: none !important;
+}

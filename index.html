@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
   <head>
     <meta charset="utf-8"> <!-- utf-8 works for most cases -->
@@ -7,12 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <title>Подтверждение заказа</title>
+    <title>Видеогаллерея</title>
   </head>
 
 <!-- BEGIN BODY -->
   <body>
     <main class="text-center">
+      <table class="video-gallery">
+        <tr>
+          <td class="current-video" rowspan="4">
+            <div id="nothing-to-play" class="text-center">
+              <p>Nothing to play!</p>
+              <p>Select a video</p>
+            </div>
+            <div id="video-1">
+              <video controls src="https://cs531400.vkuservideo.net/13/eabNTo8Oj8zMDg3/videos/0f416cfdbd.480.mp4?extra=R2YSRAuc0P_rd32OXIXnK8A1hBH_CSLmZrIX66DKJPfwDXiIcoBPtLjtwapJwgTBAHQB8c7oEHg4SbPLA3OLK1dj3ydMwpT1ZA50mBnNmfB8OO6ulYgrfrEaUzw0zQDIqPnM-h89OxVmPIUiX4AeKrgtrZ6X&c_uniq_tag=r4QhG3wIonvs1ayoh9q8a3Ty7bcZ0bOZ37VGiifUm7M"></video>
+              <p class="video-name">Saltman</p>
+            </div>
+            <div id="video-2">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/LXb3EKWsInQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p class="video-name">COSTA RICA 4K</p>
+            </div>
+            <div id="video-3">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/IzS7ga4twH4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p class="video-name">TERMINATOR 6 Trailer</p>
+            </div>
+            <div id="video-4">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/VfYxEKoEkdI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p class="video-name">Wekfest Japan 2019</p>
+            </div>
+          </td>
+          <td id="video-link-1">
+            Saltman
+          </td>
+        </tr>
+        <tr>
+          <td id="video-link-2">
+            COSTA RICA 4K
+          </td>
+        </tr>
+        <tr>
+          <td id="video-link-3">
+            TERMINATOR 6 DARK FATE Trailer
+          </td>
+        </tr>
+        <tr>
+          <td id="video-link-4">
+            Wekfest Japan 2019
+          </td>
+        </tr>
+      </table>
     </main>
+    <script src="controls.js"></script>
   </body>
 </html>
