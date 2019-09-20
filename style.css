@@ -14,7 +14,7 @@
 
 .current-video {
   border: none !important;
-  border-radius: none !important;
+  border-radius: 0 !important;
 }
 
 .video-name {
@@ -29,9 +29,66 @@
 #video-1, #video-2, #video-3, #video-4 {
   display: none;
   margin: 10px;
-  border-radius: none !important;
+  border-radius: 0 !important;
 }
 
 iframe {
   border: none;
+}
+
+.comments-block {
+  border-radius: 0 !important;
+  padding: 20px;
+}
+
+#video-1-comments-block, #video-2-comments-block, #video-3-comments-block, #video-4-comments-block {
+  display: none;
+}
+
+.comment-row {
+  background: #c7ced4;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.7em;
+  line-height: 1;
+  margin: 5px 0px;
+}
+
+.comment-row p {
+  margin-top: 5px;
+  
+}
+
+#comment-write-box {
+  padding: 20px;
+  border-radius: 0 !important;
+  display: none;
+}
+#comment-write-form input, textarea {
+  font-size: 0.8em;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+/* button styles */
+.btn {
+  font-size: 1em;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-primary {
+  border: #0088ff 2px solid;
+  color: #0088ff;
+  padding: 0.2em 1em;
+}
+
+.btn-primary:hover {
+  transition: all 0.2s;
+  color: #fff;
+  background: #0088ff;
 }

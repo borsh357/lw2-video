@@ -29,7 +29,7 @@
               <p class="video-name">COSTA RICA 4K</p>
             </div>
             <div id="video-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/nBYZpsbu9ds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nBYZpsbu9ds" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <p class="video-name">Transient 1000FPS</p>
             </div>
             <div id="video-4">
@@ -56,8 +56,66 @@
             Wekfest Japan 2019
           </td>
         </tr>
+        <tr id="main-comments-block">
+          <td class="comments-block" id="video-1-comments-block">
+            Comments:
+              <div class="comment-row">
+                <strong>dima224</strong>
+                <p>good video!</p>
+            </div>
+          </td>
+          <td class="comments-block" id="video-2-comments-block">
+              Comments:
+              <div class="comment-row">
+                <strong>vasya</strong>
+                <p>perfecto</p>
+              </div>
+          </td>
+          <td class="comments-block" id="video-3-comments-block">
+              Comments:
+              <div class="comment-row">
+                <strong>antoshka</strong>
+                <p>Хочу также</p>
+              </div>
+          </td>
+          <td class="comments-block" id="video-4-comments-block">
+            Comments:
+            <div class="comment-row">
+              <strong>perforator</strong>
+              <p>Крутяк</p>
+            </div>
+            <div class="comment-row">
+              <strong>alexey</strong>
+              <p>Хорошее видео.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="comment-write-box">
+            <h3>Оставить комментарий</h3>
+            <form id="comment-write-form">
+              <input id="comment-input-username" type="text" placeholder="Имя пользователя" maxlength="30" required> <br>
+              <textarea id="comment-input-text" cols="30" rows="10" placeholder="Комментарий"></textarea> <br>
+              <button id="comment-send" class="btn btn-primary btn-outline" type="submit">Отправить</button>
+            </form>
+          </td>
+        </tr>
       </table>
     </main>
     <script src="controls.js"></script>
+    <script>
+      var btnSend = document.getElementById("comment-send");
+          commentsBlock = document.getElementById("main-comments-block");
+          commentRow = commentsBlock.firstChild;
+          user = document.getElementById("comment-input-username");
+          text = document.getElementById("comment-input-text");
+
+      btnSend.onclick = function() {
+        event.preventDefault();
+        commentRow.innerHTML += '<div class="comment-row"><strong>' + user.value + ':</strong><p>' + text.value + '</p></div>';
+
+      }
+
+    </script>
   </body>
 </html>
