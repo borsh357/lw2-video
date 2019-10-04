@@ -8,7 +8,8 @@ btnSend.onclick = function() {
   for (let index = 0; index < commentsArray.length; index++) {
     if (commentsArray[index].style.display == 'block') {
       commentsArray[index].innerHTML += '<div class="comment-row"><strong class="comment-user">' + user.value + ':</strong><p>' + text.value + '</p></div>';
-    } else {
     }
   }
+  user.value = "";
+  text.value = "";
 }

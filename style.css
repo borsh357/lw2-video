@@ -66,7 +66,7 @@ iframe {
   border: none;
 }
 
-#video-1, #video-2, #video-3, #video-4, #video-1-comments-block, #video-2-comments-block, #video-3-comments-block, #video-4-comments-block {
+.video, .comments-block {
   display: none;
 }
 
