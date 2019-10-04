@@ -10,6 +10,6 @@ btnSend.onclick = function() {
       commentsArray[index].innerHTML += '<div class="comment-row"><strong class="comment-user">' + user.value + ':</strong><p>' + text.value + '</p></div>';
     }
   }
-  user.value = "";
-  text.value = "";
+  user.value = '';
+  text.value = '';
 }
